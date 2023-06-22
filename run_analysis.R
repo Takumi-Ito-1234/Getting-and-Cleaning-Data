@@ -23,7 +23,7 @@ names(df_mean_std) <- col_name$V2
 #From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 df2 <- lapply(df_mean_std, mean)
 
-write.table(df_mean_std, "./data.txt", row.names = FALSE)
+write.table(df_mean_std, "./data.txt", quote = FALSE, row.names = FALSE)
 
 col_name$V1 <- 1:nrow(col_name)
 write.table(col_name, "./feature.txt", quote = FALSE, row.names = FALSE, col.names = FALSE)
